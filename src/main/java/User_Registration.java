@@ -14,9 +14,12 @@ public class User_Registration {
         System.out.println("Enter Email Id");
         String emailid = sc.next();
         mail(emailid);*/
-        System.out.println("Enter Phone Number");
+        /*System.out.println("Enter Phone Number");
         String phoneno = sc.next();
-        phoneno(phoneno);
+        phoneno(phoneno);*/
+        System.out.println("Enter Password Which have 8 Character");
+        String pass1 = sc.next();
+        PassRule1(pass1);
     }
 
     public static String First_Name(String first) {
@@ -76,5 +79,20 @@ public class User_Registration {
             System.out.println("Valid input");
         }
         return " " ;
+    }
+
+    public static String PassRule1(String pass1)
+    {
+        Pattern pattern = Pattern.compile("[a-zA-Z]{8,}");
+        Matcher matcher = pattern.matcher(pass1);
+        boolean ismatch = matcher.matches();
+        if(ismatch)
+        {
+            System.out.println("Valid Password");
+        }
+        else {
+            System.out.println("Invalid Input");
+        }
+        return " ";
     }
 }
