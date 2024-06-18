@@ -83,7 +83,7 @@ public class User_Registration {
 
     public static String PassRule1(String pass1)
     {
-        Pattern pattern = Pattern.compile("[a-zA-Z0-9]{8,}");
+        Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*]).{8,}$");
         Matcher matcher = pattern.matcher(pass1);
         boolean ismatch = matcher.matches();
         if(ismatch)
@@ -92,7 +92,7 @@ public class User_Registration {
         }
         else {
             System.out.println("Invalid Input");
-        }
+        } 
         return " ";
     }
 }
