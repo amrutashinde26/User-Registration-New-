@@ -5,15 +5,18 @@ import java.util.regex.Pattern;
 public class User_Registration {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        /*System.out.println("Enter First Name");
+       /* System.out.println("Enter First Name");
         String firstname = sc.next();
-        First_Name(firstname);*/
-       /* System.out.println("Enter Last Name");
+        First_Name(firstname);
+        System.out.println("Enter Last Name");
         String lastname = sc.next();
-        Last_Name(lastname); */
+        Last_Name(lastname);
         System.out.println("Enter Email Id");
         String emailid = sc.next();
-        mail(emailid);
+        mail(emailid);*/
+        System.out.println("Enter Phone Number");
+        String phoneno = sc.next();
+        phoneno(phoneno);
     }
 
     public static String First_Name(String first) {
@@ -39,7 +42,7 @@ public class User_Registration {
             System.out.println("Valid Input");
         }
         else
-        {
+        {   
             System.out.println("Invalid Input");
         }
         return  " ";
@@ -60,5 +63,18 @@ public class User_Registration {
         return " " ;
     }
 
-    
+    public static String phoneno(String number)
+    {
+        Pattern pattern = Pattern.compile("^[0-9]{2}[0-9]{10}$");
+        Matcher matcher= pattern.matcher(number);
+        boolean ismatch = matcher.matches();
+        if(ismatch)
+        {
+            System.out.println("Valid Phone Number");
+        }
+        else {
+            System.out.println("Valid input");
+        }
+        return " " ;
+    }
 }
