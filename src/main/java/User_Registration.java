@@ -5,21 +5,22 @@ import java.util.regex.Pattern;
 public class User_Registration {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-       /* System.out.println("Enter First Name");
+        /*System.out.println("Enter First Name");
         String firstname = sc.next();
         First_Name(firstname);
         System.out.println("Enter Last Name");
         String lastname = sc.next();
-        Last_Name(lastname);
+        Last_Name(lastname);*/
+        for(int i=0;i<5;i++){
         System.out.println("Enter Email Id");
         String emailid = sc.next();
-        mail(emailid);*/
-        /*System.out.println("Enter Phone Number");
+        mail(emailid);}
+       /* System.out.println("Enter Phone Number");
         String phoneno = sc.next();
-        phoneno(phoneno);*/
+        phoneno(phoneno);
         System.out.println("Enter Password Which have 8 Character");
         String pass1 = sc.next();
-        PassRule1(pass1);
+        PassRule1(pass1);*/
     }
 
     public static String First_Name(String first) {
@@ -53,7 +54,7 @@ public class User_Registration {
 
     public  static  String mail( String mail)
     {
-        Pattern pattern = Pattern.compile("^([a-zA-z0-9._%-]+@[a-zA-z0-9.-]+\\.[a-zA-Z]{2,})$");
+        Pattern pattern = Pattern.compile("^([a-zA-z0-9._%-]+@[a-zA-z0-9.-]+\\.[a-zA-Z]{3,})$");
         Matcher matcher = pattern.matcher(mail);
         boolean ismatch = matcher.matches();
         if(ismatch)
